@@ -1,74 +1,90 @@
-# Transcendance
 
-**FRONT-END**
+# ft_transcendance_devops ⚙️🚀
 
-Without framework : Typescript - OK
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)] 
+[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)] 
+[![ElasticSearch](https://img.shields.io/badge/-ElasticSearch-005571?style=for-the-badge&logo=elasticsearch)]
+[![GitHub issues](https://img.shields.io/github/issues/Frqnku/ft_transcendance_devops)]
 
-- 0.5 - Minor module : Tailwind CSS - OK
-- 0.5 - Internationalisation - OK
-- 0.5 - Accessibility - OK
+---
 
-**GRAPHICS**
+## Overview
 
-- 1- Major module : 3D Babylon.js - OK
+This repository focuses on the **DevOps** part of the *ft_transcendance* school project, delivering a secure, scalable, and robust infrastructure to support microservices.
 
-**BACK-END**
+---
 
-- 1 - Major module : Framework - Fastify / Node.js - OK
-- 0.5 - Minor module : Database in SQLite - OK
-- 1 - Major module : Micro-services - OK
+## 🚀 My DevOps Contribution
 
-**USER MANAGEMENT**
+I am responsible for designing and implementing the following solutions:
 
-- 1 - Major module : standard user management - OK
+### 🔐 Authentication Service  
+- Secure authentication based on **JWT**  
+- Integration of **2FA** (Two-Factor Authentication) for enhanced access security  
 
-**CYBER SCURITY**
-- 1 - Major module: 2FA and JWT - OK
-- 1 - Major module: WAF / Hashicorp - OK
+### 🐳 Dockerization of Microservices  
+- Full **containerization of microservices** to ensure portability and isolation  
+- Optimized Docker images with multi-staging and light distro for production use  
 
-**DEV ops**
-- 0.5 - Minor module: Grafana Prometheus - OK
-- 1 - Major module: Elastic Search - OK
+### 🌐 Nginx with Reverse Proxy & WAF  
+- Setup of a performant **Nginx reverse proxy** for request routing  
+- Integration of **ModSecurity** as a Web Application Firewall (WAF) to protect against common web attacks  
 
+### 🔐 SSL Certificate Management  
+- Secure storage of SSL certificates using **HashiCorp Vault**  
+- Automated certificate renewal and deployment  
 
-**GITHUB**
+### 📊 Advanced Monitoring  
+- Comprehensive infrastructure monitoring with **Prometheus**  
+- Custom dashboards visualization via **Grafana**  
 
-- Mono-repo
+### 📝 Centralized Logging  
+- Log collection and processing with the **ELK stack** (Elasticsearch, Logstash, Kibana)  
+- Simplified troubleshooting and security auditing  
 
-**Front-end :** 
+---
 
-TODO : 
+## 📦 Architecture Summary
 
-- Terminer Tailwind CSS : tout passer en tailwind pour ne pas garder de CSS ?
-- Mettre en place 2FA
-- Terminer le module Game 2
-- Mettre en place le OAuth 
+```
+[Clients] -> [Nginx Reverse Proxy + ModSecurity WAF] -> [Dockerized Microservices]
+                                           |
+                              [HashiCorp Vault SSL Certificates]
+                                           |
+             [Monitoring (Prometheus + Grafana)] & [Logging (ELK Stack)]
+```
 
-**Routes :**
-- LOGIN / SIGNIN :
-    - post/register - OK
-    - post/login - OK
+---
 
-- HOME:
-    - route GET pour recuperer les infos
-    - route GET pour les resultats des matchs / des tournois
-    - route GET pour afficher les amis
-    - route POST pour ajouter les amis
+## ⚙️ Key Technologies
 
-- USER MANAGEMENT :
-    - route GET pour les infos du user ???
-    - route POST pour le changement des infos
-    - route POST pour le 2FA
+| Feature                      | Technology                   |
+|------------------------------|------------------------------|
+| Authentication & Security    | JWT, 2FA                     |
+| Containerization             | Docker                       |
+| Proxy & Web Security         | Nginx, ModSecurity (WAF)     |
+| SSL Certificate Management   | HashiCorp Vault              |
+| Monitoring                   | Prometheus, Grafana          |
+| Centralized Logging          | ELK Stack                    |
 
-- GAMES
-    - route POST pour stocker les resultats des matchs 
-    - route GET pour le matchmaking (si on le fait)
+---
 
+## 🔧 Installation & Deployment
 
-**INSTALLER NODE 20**
-export NVM_DIR="$HOME/.nvm" &&
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" &&
-nvm install 20 &&
-nvm use 20 &&
-npm run dev
+This project is designed for deployment in a **Docker**-orchestrated environment.  
+To get started quickly:
 
+```bash
+make up
+```
+
+---
+
+## 📬 Contact & Contributions
+
+Feel free to open an issue or submit a pull request to improve the DevOps components.
+
+---
+
+Thank you for checking out this repository!  
+**Frqnku** – DevOps & Infrastructure Engineer 🔧🔥
